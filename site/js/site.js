@@ -4,7 +4,7 @@
     var self = {};
 
     self.sprinkleBookmarklet = function() {
-      var url = bookmarkletify("http://searls.github.com/harvest-to-bigtime/dist/harvest-to-bigtime-min.js");
+      var url = bookmarkletify("http://searls.github.com/harvest-to-bigtime/dist/harvest-to-bigtime.min.js");
       window.location.hash = url;
       $('a.bookmarklet').attr('href', url);
     };

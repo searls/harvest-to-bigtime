@@ -1,4 +1,12 @@
+###
+harvest-to-bigtime @@VERSION@@
 
+site: https://searls.github.com/harvest-to-bigtime
+
+@depend ../vendor/jquery-no-conflict.js
+@depend ../vendor/underscore-no-conflict.js
+
+###
 
 h = window.HarvestToBigtime ||= {}
 
