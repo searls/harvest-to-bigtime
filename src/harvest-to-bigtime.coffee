@@ -29,7 +29,7 @@ h = window.HarvestToBigtime ||= {}
             $("#tableSection .list-item a:contains(\"" + expense.category + "\")", $("#IF_DIALOG")[0].contentWindow.document).trigger "click"
             $(":input[name=Dt]").val expense.date
             $(":input[name=CostIN]").val expense.cost
-            $("textarea[name=Nt]").text expense.notes
+            $("textarea[name=Nt]").val expense.notes
             $("#cmdGO").trigger "click"
 
   openForm = (name) ->
@@ -55,8 +55,8 @@ h = window.HarvestToBigtime ||= {}
   parseCsv = (row) ->
     vals = row.split(/,(?=(?:[^\"]*\"[^\"]*\")*(?![^\"]*\"))/)
     date: (->
-      d = "2011-11-28".split(/-/)
-      d[1] + "/" + d[2] + "/" + d[0]
+      d = vals[0].split(/-/)
+      "#{d[1]}/#{d[2]}/#{d[0]}"
     )()
     project: vals[2]
     category: vals[4]
