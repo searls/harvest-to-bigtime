@@ -1,0 +1,4 @@
+*.swp
+.jhw-cache
+jhw.*.html
+.DS_Store
